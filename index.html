@@ -9,8 +9,8 @@
     <title>CehhGold</title>
     <link rel="stylesheet" type="text/css" href="index.css">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-    <link href="favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.2/cosmo/bootstrap.min.css">
+    <link href="favicon.png" rel="shortcut icon" type="image/x-icon"/>
 
   </head>
 
@@ -18,53 +18,74 @@
   <body>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.js" integrity="sha256-icjghcPaibMf1jv4gQIGi5MeWNHem2SispcorCiCfSg=" crossorigin="anonymous"></script>    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
     <script src="./script.js"></script>
     <script src="./web3.min.js"></script>
     <script src="./abi.js"></script>
 
+    <div class="background-particles">
+      <div id="particles-js" class="background-particles"></div>
+    </div>
 
-    <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">
-        <img src="cehh_gold.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand cehhgold-brand" href="#">
+        <img src="cehh_gold.png" width="30" height="30" class="d-inline-block align-top" alt="cehhgold">
         CehhGold
       </a>
+      <span id="eth-address" class="ml-auto mono">Contract Address: 0xAb8ea41e0D433E89fC4aa564ef46667c08587A2E</span>
+      <span id="web3-status" class="ml-auto badge badge-error">web3 inactive</span>
     </nav>
 
-    <div class="submit-page">
-      <div class="form">
-        <div class="submit-form" id="submit-form">
-          <h1>Signature Submission</h1>
-          <input id="signature" type="text" class="form-control" placeholder="signature"/>
-          <button id="submit-button" onClick="claim()">submit</button>
+    <div class="container-fluid">
+      <div class="row align-items-start mt-5">
+        <div class="col-lg-8 col-sm-12">
+          <div class="submit-page mt-5 p-5">
+            <div class="form">
+              <div class="submit-form" id="submit-form">
+                <h1>Signature Submission</h1>
+                <input id="signature" type="text" class="form-control mono" placeholder="signature"/>
+                <button id="submit-button" class="btn btn-success disabled" onClick="claim()">submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-sm-12 mt-sm-5" align="center">
+          <div id="cards" class="row">
+            <div class="col-12 mb-3">
+              <div class="card border-secondary">
+                <div class="card-header">Philosophy</div>
+                <div class="card-body">
+                  <p class="card-text">CehhGold is all about moon</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 mb-3">
+              <div class="card border-secondary">
+                <div class="card-header">Mission</div>
+                <div class="card-body">
+                  <p class="card-text">Moon landing</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 mb-3">
+              <div class="card border-secondary">
+                <div class="card-header">Vision</div>
+                <div class="card-body">
+                  <p class="card-text">20/20 locked on the moon</p>
+                </div>
+              </div>
+            </div>  
+          </div>
         </div>
       </div>
     </div>
-
-    <script>
-      var Web3 = require('web3');
-
-      if (typeof web3 !== 'undefined'){
-        web3 = new Web3(web3.currentProvider);
-      } else {
-        web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/metamask"));
-      }
-
-      web3.eth.defaultAccount = web3.eth.accounts[0];
-
-      var CehhGold = web3.eth.contract(abi).at('0xAb8ea41e0D433E89fC4aa564ef46667c08587A2E');
-
-      function claim(){
-        const sig = $('#signature').val();
-        if(/^0x[0-9a-fA-F]{130}$/.test(sig)) {
-          CehhGold.claimWithSignature(sig, function(err, ans){
-          }) 
-        } else {
-          window.alert('Invalid signature format. The signature must begin with 0x and be 132 characters long in total.')
-        }
-      }
-
-    </script>
+    <nav class="navbar fixed-bottom navbar-expand-lg justify-content-center navbar-light bg-light">
+      <blockquote class="blockquote text-center pt-3">
+        <p class="mb-0">Buy CehhGold</p>
+        <footer class="blockquote-footer"><cite title="Source Title">Cehh</cite></footer>
+      </blockquote>
+    </nav>
   </body>
 </html>
 
