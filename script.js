@@ -41,7 +41,7 @@ $(document).ready(function(){
 
   var CehhGold = web3.eth.contract(abi).at('0xAb8ea41e0D433E89fC4aa564ef46667c08587A2E');
 
-  function claim(){
+  $('#submit-button').on('click',function() {
     const sig = $('#signature').val();
     if(/^0x[0-9a-fA-F]{130}$/.test(sig)) {
       CehhGold.claimWithSignature(sig, function(err, ans){
@@ -49,6 +49,6 @@ $(document).ready(function(){
     } else {
       window.alert('Invalid signature format. The signature must begin with 0x and be 132 characters long in total.')
     }
-  }
-});  
+  });
+});
 
