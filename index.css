@@ -53,6 +53,15 @@
 #cards {
   opacity: .9;
 }
+.cehhgold-badge:hover {
+  font-size: 16px !important;
+}
+.cehhgold-badge {
+-webkit-transition: font-size 0.2s;
+   -moz-transition: font-size 0.2s;
+     -o-transition: font-size 0.2s;
+        transition: font-size 0.2s;
+}
 body {
   border-radius: 0px !important;
   font-family: 'Roboto', sans-serif !important;

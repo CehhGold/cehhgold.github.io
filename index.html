@@ -27,13 +27,36 @@
       <div id="particles-js" class="background-particles"></div>
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
       <a class="navbar-brand cehhgold-brand" href="#">
         <img src="cehh_gold.png" width="30" height="30" class="d-inline-block align-top" alt="cehhgold">
         CehhGold
       </a>
-      <span id="eth-address" class="ml-auto mono">Contract Address: 0xAb8ea41e0D433E89fC4aa564ef46667c08587A2E</span>
-      <span id="web3-status" class="ml-auto badge badge-error">web3 inactive</span>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <span id="eth-address" class="mr-auto ml-5 mono">Contract Address: 0xAb8ea41e0D433E89fC4aa564ef46667c08587A2E</span>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mr-2">
+            <span id="cehhgold-balance" class="badge badge-warning cehhgold-badge" data-toggle="tooltip" title="1 boop is the amount mined from a 32-bit difficulty address"><span id="boops-balance" class="mono">...</span> boops</span>
+          </li>
+          <li class="nav-item mr-2">
+            <span id="web3-status" class="badge badge-warning cehhgold-badge" data-toggle="tooltip">web3 inactive</span>
+          </li>
+          <li class="nav-item mr-2">
+            <div class="btn-group">
+              <button type="button" class="badge btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Links
+              </button>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a id="cehhgold-address" class="dropdown-item text-warning disabled" target="_blank">My CEHH+ Address</a>
+                <a href="https://etherscan.io/address/0xab8ea41e0d433e89fc4aa564ef46667c08587a2e" target="_blank" class="dropdown-item">CEHH+ Contract</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <div class="container-fluid">
@@ -49,7 +72,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="col-lg-4 col-sm-12 mt-sm-5" align="center">
           <div id="cards" class="row">
             <div class="col-12 mb-3">
