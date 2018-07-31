@@ -37,21 +37,38 @@
 .cehhgold-brand {
   font-weight: 300 !important;
 }
+@media (min-width: 992px) {
+  .background-particles {
+    width: 67%;
+  }
+}
+@media (max-width: 992px) {
+  .background-particles {
+    width: 100%;
+  }
+}
 .background-particles {
   position: fixed;
   height: 100%;
-  width: 100%;
-  top: 0;
-  left:0;
-  color: #fff;
-  z-index: -1;
+  top: 60px;
+  left: 0px;
 }
+
 #eth-address {
   color: white;
   font-size: 14px;
 }
-#cards {
+.cards-data {
   opacity: .9;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.cards-data:hover {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  transform: scale(1.05);
 }
 .cehhgold-badge:hover {
   font-size: 14px !important;
