@@ -54,20 +54,33 @@
   opacity: .9;
 }
 .cehhgold-badge:hover {
-  font-size: 16px !important;
+  font-size: 14px !important;
 }
 .cehhgold-badge {
--webkit-transition: font-size 0.2s;
-   -moz-transition: font-size 0.2s;
-     -o-transition: font-size 0.2s;
-        transition: font-size 0.2s;
+  -webkit-transition: font-size 0.1s;
+  -moz-transition: font-size 0.1s;
+  -o-transition: font-size 0.1s;
+  transition: font-size 0.1s;
+}
+.navbar-collapse {
+  -webkit-transition: height 0.1s;
+  -moz-transition: height 0.1s;
+  -o-transition: height 0.1s;
+  transition: height 0.1s;
+}
+a[download] {
+  color: #1e90ff;
+  font-weight: 700;
+  font-size: 1.25em;
+}
+a[download]:hover, a[download]:focus {
+  text-decoration: none;
 }
 body {
   border-radius: 0px !important;
   font-family: 'Roboto', sans-serif !important;
   min-height: 100%;
 }
-
 html {
   height: 100%;
 }

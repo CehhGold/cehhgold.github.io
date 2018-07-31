@@ -65,7 +65,6 @@ $(document).ready(function(){
           $('#cehhgold-balance').removeClass('badge-warning');
           $('#cehhgold-balance').addClass('badge-success');
           $('#boops-balance').text(Number(Math.floor(ans.c[0] / 45474735)).toLocaleString());
-          console.log(ans.c[0])
         }
       });
     } else {
