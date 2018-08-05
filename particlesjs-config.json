@@ -20,7 +20,7 @@
         "nb_sides": 3
       },
       "image": {
-        "src": "https://imgur.com/JjXHf96.png",
+        "src": "./cehh_gold.png",
         "width": 10,
         "height": 10
       }
@@ -40,7 +40,7 @@
       "random": false,
       "anim": {
         "enable": false,
-        "speed": 110,
+        "speed": 200,
         "size_min": 10,
         "sync": false
       }
@@ -95,7 +95,7 @@
         "speed": 3
       },
       "repulse": {
-        "distance": 200,
+        "distance": 100,
         "duration": 0.4
       },
       "push": {

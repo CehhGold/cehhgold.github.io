@@ -10,13 +10,16 @@
     <link rel="stylesheet" type="text/css" href="index.css">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.2/cosmo/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/brands.css" integrity="sha384-nT8r1Kzllf71iZl81CdFzObMsaLOhqBU1JD2+XoAALbdtWaXDOlWOZTR4v1ktjPE" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css" integrity="sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/regular.css" integrity="sha384-zkhEzh7td0PG30vxQk1D9liRKeizzot4eqkJ8gB3/I+mZ1rjgQk+BSt2F6rT2c+I" crossorigin="anonymous">
     <link href="favicon.png" rel="shortcut icon" type="image/x-icon"/>
 
   </head>
 
 
   <body>
-    <div class="background-particles">
+    <div class="particle-container">
       <div id="particles-js" class="background-particles"></div>
     </div>
 
@@ -51,9 +54,9 @@
         </ul>
       </div>
     </nav>
-    <div class="container-fluid">
+    <div class="container-fluid p-4">
       <div class="row align-items-start mt-5">
-        <div class="col-lg-8 col-12">
+        <div class="col-md-8 col-12">
           <div class="submit-page mt-5 p-5">
             <div class="form">
               <div class="submit-form" id="submit-form">
@@ -64,11 +67,11 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-12 mt-5" align="center">
+        <div class="col-md-4 col-12 mt-5 cards" align="center">
           <div class="row">
             <div class="col-12 mb-3">
               <div class="card border-secondary cards-data">
-                <div class="h2 card-header">Philosophy</div>
+                <div class="h2 card-header">Intro</div>
                 <div class="card-body">
                   <p class="card-text">CehhGold is the mineable currency of Ethereum</p>
                 </div>
@@ -76,17 +79,20 @@
             </div>
             <div class="col-12 mb-3">
               <div class="card border-secondary cards-data">
-                <div class="h2 card-header">Mission</div>
-                <div class="card-body">
-                  <p class="card-text">CehhGold's code will become the new standard of token distribution</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 mb-3">
-              <div class="card border-secondary cards-data">
-                <div class="h2 card-header">Vision</div>
-                <div class="card-body">
-                  <p class="card-text">CehhGold will turn into the currency of Ethereum</p>
+                <div class="h2 card-header">Social</div>
+                <div class="list-group">
+                  <a target="_blank" href="https://discord.gg/SyfEvhU" class="list-group-item list-group-item-action">
+                    <i class="fab fa-lg fa-discord"></i> Join us on Discord <i class="fab fa-lg fa-discord"></i>
+                  </a>
+                  <a target="_blank" href="https://etherscan.io/token/0xab8ea41e0d433e89fc4aa564ef46667c08587a2e" class="list-group-item list-group-item-action">
+                    <i class="fab fa-lg fa-ethereum"></i> Etherscan Page <i class="fab fa-lg fa-ethereum "></i>
+                  </a>
+                  <a target="_blank" href="https://github.com/CehhGold" class="list-group-item list-group-item-action">
+                    <i class="fab fa-lg fa-github"></i> Collaborate! <i class="fab fa-lg fa-github"></i>
+                  </a>
+                  <a target="_blank" href="https://www.npmjs.com/package/cehhgold-miner" class="list-group-item list-group-item-action">
+                    <i class="fab fa-lg fa-npm"></i> Download <i class="fab fa-lg fa-npm"></i>
+                  </a>
                 </div>
               </div>
             </div>
@@ -102,7 +108,7 @@
               <div class="card border-secondary cards-data">
                 <div class="h2 card-header">Miner</div>
                 <div class="card-body">
-                   <a href="https://nodei.co/npm/cehhgold-miner/"><img src="https://nodei.co/npm/cehhgold-miner.png?compact=true"></a>
+                  <a href="https://nodei.co/npm/cehhgold-miner/" target="_blank"><img src="https://img.shields.io/npm/v/cehhgold-miner.svg?logo=npm"></a>
                 </div>
               </div>
             </div>  
